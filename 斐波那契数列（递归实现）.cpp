@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include <string.h>
+#include<math.h>
+#include<stdlib.h>
+int fb(int n)
+{
+	if (n <= 2)
+		return 1;
+	if(n>2)
+		return fb(n - 1) + fb(n - 2);
+}
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	fb(n);
+	printf("%d", fb(n));
+	return 0;
+}
